@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Madimi+One&family=Pacifico&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik+80s+Fade&display=swap');
+
+.general{
+    background-color: orange;
+    width: 100vw;
+    height: 78.3vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    
+}
+.ppal{
+    border: 3px solid orangered;
+    border-radius: 30px;
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 40%;
+    height: 90%;
+}
+h1{
+    font-family: "Rubik 80s Fade", system-ui;
+    text-align: center;
+    font-size: 35px;
+}
+p{
+    font-family: "Rubik 80s Fade", system-ui;
+    text-align: center;
+    font-size: 25px;
+}
+h3{
+    font-family: "Rubik 80s Fade", system-ui;
+    text-align: center;
+    font-size: 30px;
+}
