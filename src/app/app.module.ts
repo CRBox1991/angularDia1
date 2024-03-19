@@ -7,6 +7,7 @@ import { NavBarComponenteComponent } from './components/nav-bar-componente/nav-b
 import { FooterComponenteComponent } from './components/footer-componente/footer-componente.component';
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
+import { FormComponenteComponent } from './components/form-componente/form-componente.component';
 
 
 
@@ -18,6 +19,7 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
     FooterComponenteComponent,
     HomePageComponent,
     RegisterPageComponent,
+    FormComponenteComponent,
     
     
     
