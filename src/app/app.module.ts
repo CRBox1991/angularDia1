@@ -10,7 +10,7 @@ import { RegisterPageComponent } from './pages/register-page/register-page.compo
 import { FormComponenteComponent } from './components/form-componente/form-componente.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { ProfileBoxComponent } from './components/profile-box/profile-box.component';
-import { ProfileFormComponent } from './components/profile-form/profile-form.component';
+
 
 
 
@@ -25,7 +25,7 @@ import { ProfileFormComponent } from './components/profile-form/profile-form.com
     FormComponenteComponent,
     ProfilePageComponent,
     ProfileBoxComponent,
-    ProfileFormComponent,
+    
     
     
     
