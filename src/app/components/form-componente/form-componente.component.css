@@ -29,6 +29,7 @@ input{
     height: 10%;
     background-color: rgb(255, 219, 152);
     text-align: center;
+    font-family: var(--fontReggae);
 }
 button{
     border: yellow;
