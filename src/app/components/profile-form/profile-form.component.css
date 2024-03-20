@@ -1,0 +1,60 @@
+.general{
+    
+    width: 35vw;
+    height: 40vh;    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.ppal{
+    border: 3px solid orangered;
+    border-radius: 30px;
+    width: 35vw;
+    height: 75vh;    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+h2{
+    color: white;
+    font-size: 30px;
+    font-family: var(--fontRubik)
+}
+form{
+    
+    border-radius: 20px;
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+input{
+    width: 70%;
+    height: 10%;
+    background-color: rgb(255, 219, 152);
+    text-align: center;
+    font-family: var(--fontReggae);
+}
+button{
+    border: yellow;
+    border-radius: 15px;
+    color:rgb(255, 0, 0);
+    font-weight: bold;
+    font-family: var(--fontRubik);
+    font-size: 20px;
+    width: 75%;
+    height: 10%;
+    background-color: rgb(255, 230, 0);
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: blue;
+    color:white;
+}

@@ -8,6 +8,9 @@ import { FooterComponenteComponent } from './components/footer-componente/footer
 import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { FormComponenteComponent } from './components/form-componente/form-componente.component';
+import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { ProfileBoxComponent } from './components/profile-box/profile-box.component';
+import { ProfileFormComponent } from './components/profile-form/profile-form.component';
 
 
 
@@ -20,6 +23,9 @@ import { FormComponenteComponent } from './components/form-componente/form-compo
     HomePageComponent,
     RegisterPageComponent,
     FormComponenteComponent,
+    ProfilePageComponent,
+    ProfileBoxComponent,
+    ProfileFormComponent,
     
     
     
