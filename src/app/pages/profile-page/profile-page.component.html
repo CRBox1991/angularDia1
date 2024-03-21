@@ -1,5 +1,28 @@
 <div class="general">
-    <app-profile-box></app-profile-box>
-    
-  
+    <div class="ppal">
+    <div class="imagen">
+        <img class="img" src="{{miUser.photo}}">
+    </div>
+    <div class="nombre">
+        <h3>Cristian Redondo Caja</h3>
+    </div>
+    <div class="datos">
+        <p><b>Nombre</b></p>
+        <p>{{miUser.name}}</p>
+        <p><b>Apellido</b></p>
+        <p>{{miUser.last_name}}</p>
+        <p><b>Email</b></p>
+        <p>{{miUser.email}}</p>
+    </div>
+    </div>
+    <div class="ppal">
+        <form action="">
+        <div><h2>EDITAR DATOS</h2></div>
+        <input type="text" value="{{miUser.name}}" #input1>
+        <input type="text" value="{{miUser.last_name}}" #input2>
+        <input type="text" value="{{miUser.email}}" #input3>
+        <input type="text" placeholder="url" #input4>
+        <button type="button"(click)="enviar(input1, input2, input3, input4)">Apply</button>
+    </form>
+    </div>
 </div>
