@@ -9,6 +9,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 import { RegisterPageComponent } from './pages/register-page/register-page.component';
 import { FormComponenteComponent } from './components/form-componente/form-componente.component';
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
+import { BooksPageComponent } from './pages/books-page/books-page.component';
+import { IdToStringPipe } from './pipes/id-to-string.pipe';
 
 
 
@@ -24,6 +26,8 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
     RegisterPageComponent,
     FormComponenteComponent,
     ProfilePageComponent,
+    BooksPageComponent,
+    IdToStringPipe,
     
     
     

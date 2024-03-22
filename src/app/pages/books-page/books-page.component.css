@@ -1,0 +1,80 @@
+.general{
+    background-color: var(--background-orange);
+    width: 100vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;    
+    
+}
+.ppal{
+    color:white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    align-items: center;
+    width: 100vw;
+    height: fit-content;
+    margin: 40px;
+}
+
+.card{
+    border: 3px solid orangered;
+    border-radius: 30px;
+    color:white;
+    width: 250px;
+    height: 430px;
+    text-align: center;
+    padding: 20px;
+}
+
+div p{
+    text-align: left;
+}
+
+div h2{
+    text-align: left;
+}
+
+
+button{
+    border: yellow;
+    border-radius: 15px;
+    color:rgb(255, 0, 0);
+    font-weight: bold;
+    font-family: var(--fontRubik);
+    font-size: 20px;
+    width: 200px;
+    height: 40px;
+    background-color: rgb(255, 230, 0);
+    text-align: center;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: blue;
+    color:white;
+}
+.even-button{
+    background-color: white;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 75vh;
+}
+form h2{
+    color: white;
+    font-family: var(--fontReggae);
+}
+input{
+    width: 200px;
+    height: 50px;
+    text-align: center;    
+}
