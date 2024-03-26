@@ -11,6 +11,7 @@ import { FormComponenteComponent } from './components/form-componente/form-compo
 import { ProfilePageComponent } from './pages/profile-page/profile-page.component';
 import { BooksPageComponent } from './pages/books-page/books-page.component';
 import { IdToStringPipe } from './pipes/id-to-string.pipe';
+import { CardComponent } from './components/card/card.component';
 
 
 
@@ -28,6 +29,7 @@ import { IdToStringPipe } from './pipes/id-to-string.pipe';
     ProfilePageComponent,
     BooksPageComponent,
     IdToStringPipe,
+    CardComponent,
     
     
     

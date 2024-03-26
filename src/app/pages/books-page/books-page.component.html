@@ -1,27 +1,12 @@
 <div class="general">
-    <div class="ppal">
-        <div *ngIf="myBooks.length === 0"> No hay libros </div>
-        <div class="card" *ngFor="let book of myBooks; let even = even">            
-            <div >
-                <img src="{{book.photo}}" alt="">
-            </div>
-            <div>
-                <p>{{book.type}}</p>
-            </div>
-            <div>
-                <h2>{{book.title}}</h2>
-                <p>{{book.author}}</p>
-                <p>Id: {{book.id_book | idToString }} </p>
-            </div>
-            <div >
-                <p>{{book.price}} €</p>
-                <button [ngClass] = "{'even-button': even}">Comprar</button>
-            </div>
-        </div>
-    </div>    
+    <div class="noLibros" *ngIf="myBooks.length === 0">No hay libros</div>
+    <div *ngFor="let book of myBooks; let i = index">
+        <app-card [bucleBooks]="book" (borrarLibro)="deleteBook($event)" ></app-card>
+    </div>
 </div>
-<div class="general">
-    
+
+
+<div class="general">    
     <form action="">
         <h2>AÑADE TU LIBRO</h2>
         <input type="text" placeholder="Titulo" #input1>
