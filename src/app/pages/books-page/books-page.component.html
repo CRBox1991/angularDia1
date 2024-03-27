@@ -1,20 +1,10 @@
-<div class="general">
-    <div class="noLibros" *ngIf="myBooks.length === 0">No hay libros</div>
-    <div *ngFor="let book of myBooks; let i = index">
-        <app-card [bucleBooks]="book" (borrarLibro)="deleteBook($event)" ></app-card>
+<div class="general">     
+    <input type="search" placeholder="Book's Id" >   
+    <div class="noLibros" *ngIf="BooksService.getAll().length === 0">No hay libros</div>
+    <div *ngFor="let book of BooksService.getAll()">
+        <app-card [bucleBooks]="book" (borrarLibro)="BooksService.deleteBook($event)" ></app-card>
     </div>
 </div>
 
 
-<div class="general">    
-    <form action="">
-        <h2>AÑADE TU LIBRO</h2>
-        <input type="text" placeholder="Titulo" #input1>
-        <input type="text" placeholder="Tapa dura o blanda" #input2>
-        <input type="text" placeholder="Autor" #input3>
-        <input type="text" placeholder="Precio" #input4>
-        <input type="text" placeholder="Photo" #input5>
-        <input type="text" placeholder="Codigo de Libro" #input6>
-        <button type="button" (click)="addBook(input1.value, input2.value, input3.value, input4.value, input5.value, input6.value)">Add Book</button>
-    </form>
-</div>
+

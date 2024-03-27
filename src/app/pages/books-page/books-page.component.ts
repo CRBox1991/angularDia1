@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Book } from 'src/app/models/book';
+import { BooksService } from 'src/app/shared/books.service';
 
 @Component({
   selector: 'app-books-page',
@@ -8,27 +9,22 @@ import { Book } from 'src/app/models/book';
 })
 export class BooksPageComponent {
 
-    public myBooks: Book [];
-
-  constructor(){
-
-    this.myBooks =[
-      new Book("Caperucita Roja", "Tapa dura", "Charles Perrault", 13.99, "../../../assets/img/caperucita.jpeg",1),
-      new Book("Los Tres Cerditos", "Tapa blanda", "Joseph Jacobs", 11.99, "../../../assets/img/cerditos.jpeg",2),  
-      new Book("La cenicienta", "Tapa dura", "Giambattista Basile", 9.99, "../../../assets/img/cenicienta.jpeg",3),
-      
-    ]
+      constructor(public BooksService:BooksService){   
     
   }
 
-  public addBook(title: string, type: string, autor: string,precio: number,photo: string, id:number){
-    this.myBooks.push(new Book(title, type, autor, precio, photo, id))     
-  }
+  
 
-  public deleteBook(book: Book) {
-    let index = this.myBooks.indexOf(book);   
-      this.myBooks.splice(index, 1);    
-  }
+
+  
+  //public addBook(title: string, type: string, autor: string,precio: number,photo: string, id:number){
+   // this.myBooks.push(new Book(title, type, autor, precio, photo, id))     
+  //}
+
+  // public deleteBook(book: Book) {
+    //let index = this.myBooks.indexOf(book);   
+     // this.myBooks.splice(index, 1);    
+ // }
 
 }
 

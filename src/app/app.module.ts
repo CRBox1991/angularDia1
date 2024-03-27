@@ -12,6 +12,8 @@ import { ProfilePageComponent } from './pages/profile-page/profile-page.componen
 import { BooksPageComponent } from './pages/books-page/books-page.component';
 import { IdToStringPipe } from './pipes/id-to-string.pipe';
 import { CardComponent } from './components/card/card.component';
+import { AddBookComponent } from './pages/add-book/add-book.component';
+import { UpdateBookComponent } from './pages/update-book/update-book.component';
 
 
 
@@ -30,6 +32,8 @@ import { CardComponent } from './components/card/card.component';
     BooksPageComponent,
     IdToStringPipe,
     CardComponent,
+    AddBookComponent,
+    UpdateBookComponent,
     
     
     

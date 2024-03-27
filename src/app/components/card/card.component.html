@@ -1,8 +1,8 @@
 
     <div class="ppal">
-    
+       
         <div class="card" >   
-            <button type="button" class="close" (click)="deleteBook(bucleBooks)">X</button>         
+            <button type="button" class="close" (click)="BooksService.deleteBook(bucleBooks.id_book)">X</button>         
             <div >
                 <img src="{{bucleBooks.photo}}" alt="">
             </div>
@@ -12,7 +12,7 @@
             <div>
                 <h2>{{bucleBooks.title}}</h2>
                 <p>{{bucleBooks.author}}</p>
-                <p>Id: {{bucleBooks.id_book | idToString }} </p>
+                <p>Id:{{bucleBooks.id_book | idToString }} </p>
             </div>
             <div >
                 <p>{{bucleBooks.price}} €</p>

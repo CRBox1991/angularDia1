@@ -1,6 +1,7 @@
 .general{
     background-color: var(--background-orange);
     width: 100vw;
+    height: 80vh;
     height: fit-content;
     display: flex;
     flex-direction: row;
@@ -10,31 +11,13 @@
     align-items: center;    
     
 }
-.ppal{
-    color:white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    width: 100vw;
-    height: fit-content;
-    margin: 40px;
-}
-.noLibros{
-    font-family: var(--fontReggae);
-    font-size: 40px;
-    color: white;
-    height: 80vh;
-}
 
 form{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    height: 75vh;
+    height: 80vh;
 }
 form h2{
     color: white;
