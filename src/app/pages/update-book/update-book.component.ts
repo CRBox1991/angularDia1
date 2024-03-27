@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Book } from 'src/app/models/book';
+import { BooksService } from 'src/app/shared/books.service';
 
 @Component({
   selector: 'app-update-book',
@@ -7,9 +9,9 @@ import { Component } from '@angular/core';
 })
 export class UpdateBookComponent {
 
-  constructor(){
+  public book: Book
+  constructor(public BooksService: BooksService){
 
   } 
-
 
 }

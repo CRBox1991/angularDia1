@@ -6,7 +6,8 @@ import { Book } from '../models/book';
 })
 export class BooksService {
 
-  private myBooks: Book [] 
+public book: Book
+private myBooks: Book [] 
 
   constructor() {   
 
@@ -32,10 +33,36 @@ public getOne(Id_libro: number): Book{
    }
   }
 
-public deleteBook(id_book: number):boolean{
-  this.myBooks.splice(id_book,1)
-  return true
+public addBook(title: string, type: string, autor: string,precio: number,photo: string, id:number){
+  this.myBooks.push(new Book(title, type, autor, precio, photo, id))
+  console.log(this.myBooks);  
+  }
+
+  public editBook(title: string, type: string, author: string, price: number, photo: string, id: number){
+     
+    for(let i = 0; i < this.myBooks.length; i++){
+      if(this.myBooks[i].id_book === id){
+        this.myBooks[i].author=author,
+        this.myBooks[i].title=title,
+        this.myBooks[i].type=type,
+        this.myBooks[i].price=price;
+        this.myBooks[i].photo=photo;
+      }        
+    }
+    console.log(this.myBooks);
+  }
+  
+  
+  
+
+public deleteBook(id_book: number){ 
+  for(let i = 0; this.myBooks.length; i++){
+    if(this.myBooks[i].id_book == id_book){
+      this.myBooks.splice(i,1)}
+    }  
+  }
+    
 }
 
-}
+
 

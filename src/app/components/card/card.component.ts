@@ -11,7 +11,8 @@ export class CardComponent {
 
   
   @Input() bucleBooks: Book;
-  @Output() borrarLibro = new EventEmitter<Book>();
+  //@Output() borrarLibro = new EventEmitter<Book>();
+  //@Output() editaLibro = new EventEmitter<Book> ()
   
   
   constructor(public BooksService:BooksService){

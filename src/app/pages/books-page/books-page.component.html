@@ -2,7 +2,7 @@
     <input type="search" placeholder="Book's Id" >   
     <div class="noLibros" *ngIf="BooksService.getAll().length === 0">No hay libros</div>
     <div *ngFor="let book of BooksService.getAll()">
-        <app-card [bucleBooks]="book" (borrarLibro)="BooksService.deleteBook($event)" ></app-card>
+        <app-card [bucleBooks]="book"></app-card>
     </div>
 </div>
 
