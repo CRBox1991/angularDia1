@@ -14,6 +14,8 @@ import { IdToStringPipe } from './pipes/id-to-string.pipe';
 import { CardComponent } from './components/card/card.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
+import { LoginPageComponent } from './pages/login-page/login-page.component';
+
 
 
 
@@ -34,6 +36,8 @@ import { UpdateBookComponent } from './pages/update-book/update-book.component';
     CardComponent,
     AddBookComponent,
     UpdateBookComponent,
+    LoginPageComponent,
+    
     
     
     

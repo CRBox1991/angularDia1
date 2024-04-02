@@ -1,9 +1,17 @@
 <div class="general">     
-    <input type="search" placeholder="Book's Id" >   
-    <div class="noLibros" *ngIf="BooksService.getAll().length === 0">No hay libros</div>
-    <div *ngFor="let book of BooksService.getAll()">
-        <app-card [bucleBooks]="book"></app-card>
+    <input type="search" placeholder="Book's Id" #id (keyup.enter)="getLibro(id.value)" >   
+    <div class="noLibros" *ngIf="libros.length === 0">No hay libros</div>
+    <div class="general">
+        <div *ngIf="this.libro; else Libros">  
+            <app-card [bucleBooks]="libro"></app-card>
+        </div>    
+        <ng-template #Libros>
+            <div *ngFor="let book of libros; let even = even">
+                <app-card [bucleBooks]="book" (borrarLibro)="deleteBook($event)" [even]="even"></app-card>
+            </div>
+        </ng-template>
     </div>
+    
 </div>
 
 

@@ -10,14 +10,15 @@ import { BooksService } from 'src/app/shared/books.service';
 export class AddBookComponent {
 
   public book: Book;
-  constructor(public BooksService : BooksService){ 
+  public myBooks: Book [];
+  constructor(public booksService : BooksService){ 
     
   }
 
 
-
-  //public addBook(title: string, type: string, autor: string,precio: number,photo: string, id:number){
-    //this.myBooks.push(new Book(title, type, autor, precio, photo, id))     
- //}
+  public addBook(title: string, type: string, autor: string,precio: number,photo: string, id:number){
+    this.booksService.addBook(title, type, autor, precio, photo, id);
+    alert("El libro se agrego correctamente")   
+  }
 
 }

@@ -2,7 +2,8 @@
     <div class="ppal">
        
         <div class="card" >   
-            <button type="button" class="close" (click)="BooksService.deleteBook(bucleBooks.id_book)">X</button>         
+            <button type="button" class="close" (click)="deleteBook(bucleBooks)">X</button>  
+                   
             <div >
                 <img src="{{bucleBooks.photo}}" alt="">
             </div>
@@ -16,8 +17,9 @@
             </div>
             <div >
                 <p>{{bucleBooks.price}} €</p>
-                <button>Comprar</button>
+                <button [ngClass] = "{'even-button': even}">Comprar</button>
             </div>
         </div>
+        
     </div>
   

@@ -11,15 +11,20 @@ export class CardComponent {
 
   
   @Input() bucleBooks: Book;
-  //@Output() borrarLibro = new EventEmitter<Book>();
+  @Input() even: boolean;
+  @Output() borrarLibro = new EventEmitter<Book>();
+  
   //@Output() editaLibro = new EventEmitter<Book> ()
   
+  public libro: Book;
   
-  constructor(public BooksService:BooksService){
+  constructor(public booksService:BooksService){
         
   }
 
-  //public deleteBook(book: Book) {
-    //this.borrarLibro.emit(book);
- // }
+  public deleteBook(book: Book ) {
+    this.borrarLibro.emit(book)
+    console.log(book);
+     
+ }
 }
