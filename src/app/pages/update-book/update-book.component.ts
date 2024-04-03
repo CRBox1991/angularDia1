@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
 
@@ -11,15 +12,15 @@ export class UpdateBookComponent {
 
   public book: Book
   public myBooks: Book []
-  constructor(public BooksService: BooksService){
+  constructor(public BooksService: BooksService, private toastr: ToastrService){
 
   } 
 
 public editBook(title: string, type: string, author: string, price: number, photo: string, id: number){
   
   if(this.BooksService.editBook(title, type, author, price, photo, id)){
-  alert("El libro fue modificado correctametne")
-    } else {alert("No existe el Id")}
+  this.toastr.success("El libro fue modificado correctametne")
+    } else {this.toastr.error("No existe el Id")}
   }
 
 }

@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
 
@@ -11,15 +12,16 @@ export class BooksPageComponent {
 public libro: Book;
 public libros: Book[];
 
-      constructor(public booksService:BooksService){   
-        this.libros = this.booksService.getAll()
-    
+      constructor(public booksService:BooksService, private toastr: ToastrService){   
+        this.libros = this.booksService.getAll()    
   }
+
+ 
   public getLibro(id: number){ 
     if(id){ 
       this.libro = this.booksService.getOne(id)
       if(this.libro == null){
-        alert("No existe el libro")
+        this.toastr.error("No existe el libro")
       }
     } else {this.libro = null;
       this.libros = this.booksService.getAll()}    
@@ -33,7 +35,7 @@ public libros: Book[];
   public deleteBook(book: Book) {
     console.log(book);   
     this.booksService.deleteBook(book.id_book);
-    alert("Tu libro fue borrado");
+    this.toastr.success("Tu libro fue borrado");
     this.libros = this.booksService.getAll()
     } 
  }

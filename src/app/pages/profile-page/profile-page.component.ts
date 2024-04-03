@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component } from '@angular/core';
 import { User } from 'src/app/models/user';
 
@@ -11,7 +12,11 @@ export class ProfilePageComponent {
   public miUser: User
 
   constructor(){
-    this.miUser = new User(1357, "Cristian", "Redondo Caja", "dharianfenix@gmail.com", "../../../assets/img/IMG_0251.jpg", "1234")
+    this.miUser = new User()
+      this.miUser.name = "Cristian"
+      this.miUser.last_name = "Redondo Caja"
+      this.miUser.email = "dharianfenix@gmail.com"
+      this.miUser.photo = "../../assets/img/IMG_0251.jpg"
   }
 
 public enviar(nuevoNombre:HTMLInputElement, nuevoApellido:HTMLInputElement,nuevoEmail:HTMLInputElement, nuevaFoto:HTMLInputElement){

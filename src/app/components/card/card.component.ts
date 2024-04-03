@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, Output,} from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 import { Book } from 'src/app/models/book';
 import { BooksService } from 'src/app/shared/books.service';
 
@@ -18,7 +19,7 @@ export class CardComponent {
   
   public libro: Book;
   
-  constructor(public booksService:BooksService){
+  constructor(public booksService:BooksService, private toastr: ToastrService){
         
   }
 

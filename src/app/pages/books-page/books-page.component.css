@@ -8,20 +8,10 @@
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;    
+    padding-bottom: 50px;
     
 }
-.ppal{
-    color:white;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    width: 100vw;
-    height: fit-content;
-    margin: 40px;
-}
+
 .noLibros{
     font-family: var(--fontReggae);
     font-size: 40px;

@@ -1,11 +1,41 @@
+<!--Revisar porque al pulsar el validador salta en todos los campos-->
 <div class="general">
-        <form action="">
-        <div><h2>REGISTER</h2></div>
-        <input type="text" placeholder="Name">
-        <input type="text" placeholder="Surname">
-        <input type="text" placeholder="Email">
-        <input type="text" placeholder="Password">
-        <button>Register</button>
+    <form [formGroup]="registerForm">
+        <div><h2>REGISTER</h2></div>                
+        <input type="text" placeholder="Name" class="form-control" formControlName="firstName" 
+        [ngClass]="{'is-invalid':(registerForm.get('firstName').dirty || registerForm.get('firstName').touched) && !registerForm.get('firstName').valid}">
+        <div *ngIf="!registerForm.get('firstName').valid" class="invalid-feedback">
+            <p>El nombre es obligatorio</p>
+        </div>
+    
+        <input type="text" placeholder="Surname" class="form-control" formControlName="lastName"
+        [ngClass]="{'is-invalid':(registerForm.get('lastName').dirty || registerForm.get('lastName').touched) && !registerForm.get('lastName').valid}">
+        <div *ngIf="!registerForm.get('lastName').valid" class="invalid-feedback">
+            <p>El apellido es obligatorio</p>
+        </div>
+        
+        <input type="text" placeholder="Email" class="form-control" formControlName="email" 
+        [ngClass]="{'is-invalid':(registerForm.get('email').dirty || registerForm.get('email').touched) && !registerForm.get('email').valid}">
+        <div *ngIf="!registerForm.get('email').valid" class="invalid-feedback">
+            <p *ngIf="registerForm.get('email').errors.required">El email es obligatorio</p>
+            <p *ngIf="registerForm.get('email').errors.email">Direccion de mail es incorrecta</p>
+        </div>
+
+        <input type="password" placeholder="Password" class="form-control" formControlName="password"
+        [ngClass]="{'is-invalid':(registerForm.get('password').dirty || registerForm.get('password').touched) && !registerForm.get('password').valid}">
+        <div *ngIf="!registerForm.get('password').valid" class="invalid-feedback">
+            <p *ngIf="registerForm.get('password').errors.required">La password es obligatoria</p>
+            <p *ngIf="registerForm.get('password').errors.minlength">Debe tener al menos 8 caracteres</p>
+        </div>
+
+        <input type="password" placeholder="Repeat Password"  class="form-control" formControlName="password2">
+        <div *ngIf="!registerForm.get('password2').valid" class="invalid-feedback">
+            <p *ngIf="registerForm.get('password2').errors.required">La password es obligatoria</p>
+            <p *ngIf="!registerForm.get('password2').errors.required &&
+            registerForm.get('password2').errors.matchPassword">Las claves no coinciden</p>
+        </div>
+
+        <button class="btn btn-primary" (click)="register()" [disabled]="registerForm.invalid">Register</button>
     </form>
 </div>
 

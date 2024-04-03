@@ -49,3 +49,9 @@ button:hover{
     background-color: blue;
     color:white;
 }
+p{
+    color: white;
+    text-align: center;
+    width: 70%;
+    height: 5px;
+}

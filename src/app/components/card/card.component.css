@@ -24,22 +24,23 @@
 }
 
 .close{
+    
     width: 20px;
     height: 20px;
     font-size: 15px;   
     margin-bottom: 10px; 
 }
 
-div p{
+.p{
     text-align: left;
 }
 
-div h2{
+.h2{
     text-align: left;
 }
 
 
-button{
+.btn{
     border: yellow;
     border-radius: 15px;
     color:rgb(255, 0, 0);
@@ -53,7 +54,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+.btn:hover{
     background-color: blue;
     color:white;
 }

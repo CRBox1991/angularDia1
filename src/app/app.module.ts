@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponenteComponent } from './components/nav-bar-componente/nav-bar-componente.component';
@@ -15,6 +14,9 @@ import { CardComponent } from './components/card/card.component';
 import { AddBookComponent } from './pages/add-book/add-book.component';
 import { UpdateBookComponent } from './pages/update-book/update-book.component';
 import { LoginPageComponent } from './pages/login-page/login-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { LoginComponent } from './components/login/login.component';
+import { ToastrModule } from 'ngx-toastr';
 
 
 
@@ -37,16 +39,15 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
     AddBookComponent,
     UpdateBookComponent,
     LoginPageComponent,
-    
-    
-    
-    
-    
+    LoginComponent,  
     
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    ToastrModule.forRoot()
   ],
   providers: [],
   bootstrap: [AppComponent]

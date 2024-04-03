@@ -8,16 +8,16 @@
                 <img src="{{bucleBooks.photo}}" alt="">
             </div>
             <div>
-                <p>{{bucleBooks.type}}</p>
+                <p class="p">{{bucleBooks.type}}</p>
             </div>
             <div>
-                <h2>{{bucleBooks.title}}</h2>
-                <p>{{bucleBooks.author}}</p>
-                <p>Id:{{bucleBooks.id_book | idToString }} </p>
+                <h2 class="h2">{{bucleBooks.title}}</h2>
+                <p class="p">{{bucleBooks.author}}</p>
+                <p class="p">Id:{{bucleBooks.id_book | idToString }} </p>
             </div>
             <div >
-                <p>{{bucleBooks.price}} €</p>
-                <button [ngClass] = "{'even-button': even}">Comprar</button>
+                <p class="p">{{bucleBooks.price}} €</p>
+                <button class="btn" [ngClass] = "{'even-button': even}">Comprar</button>
             </div>
         </div>
         
