@@ -1,4 +1,4 @@
-.ppal{
+/* .ppal{
     
     color:white;
     display: flex;
@@ -23,13 +23,7 @@
     padding: 20px;
 }
 
-.close{
-    
-    width: 20px;
-    height: 20px;
-    font-size: 15px;   
-    margin-bottom: 10px; 
-}
+
 
 .p{
     text-align: left;
@@ -37,6 +31,14 @@
 
 .h2{
     text-align: left;
+} */
+
+.close{
+    
+    width: 20px;
+    height: 20px;
+    font-size: 15px;   
+    margin-bottom: 10px; 
 }
 
 
