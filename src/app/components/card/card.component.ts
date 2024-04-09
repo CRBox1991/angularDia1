@@ -19,7 +19,7 @@ export class CardComponent {
   
   public libro: Book;
   
-  constructor(public booksService:BooksService, private toastr: ToastrService){
+  constructor(public booksService:BooksService, private toastr: ToastrService, public apiService: BooksService){
         
   }
 
