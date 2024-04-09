@@ -21,10 +21,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/Http';
 
 
-
-
-
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -50,8 +46,8 @@ import { HttpClientModule } from '@angular/common/Http';
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    HttpClientModule,
-    
+    HttpClientModule
+        
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -29,7 +29,7 @@ public getOne(id_libro: number){
    
   console.log(id_libro);
   
-  return this.http.get(`${this.url}?id_book=${id_libro}`) 
+ return this.http.get(`${this.url}?id_book=${id_libro}`) 
   
   }
 
