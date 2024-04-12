@@ -13,7 +13,7 @@ export class CardComponent {
   
   @Input() bucleBooks: Book;
   @Input() even: boolean;
-  @Output() borrarLibro = new EventEmitter<Book>();
+  @Output() borrarLibro = new EventEmitter<number>();
   
   //@Output() editaLibro = new EventEmitter<Book> ()
   
@@ -23,9 +23,9 @@ export class CardComponent {
         
   }
 
-  public deleteBook(book: Book ) {
-    this.borrarLibro.emit(book)
-    console.log(book);
+  public deleteBook(id_book: number ) {
+    this.borrarLibro.emit(id_book)
+    console.log(id_book);
      
  }
 }

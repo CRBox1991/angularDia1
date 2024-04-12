@@ -16,21 +16,22 @@ export class UpdateBookComponent {
   constructor(public BooksService: BooksService, private toastr: ToastrService, public apiService: BooksService){
   } 
 
-public editBook(title: string, type: string, author: string, price: number, photo: string, id: number){
-  let  libroEditado = new Book(title, type, author, price, photo, id)
-  // if(this.BooksService.editBook(libroEditado)){
-  // this.toastr.success("El libro fue modificado correctametne")
-  //   } else {this.toastr.error("No existe el Id")}
-  // }
+public editBook(title: string, type: string, author: string, price: number, photo: string, id_book: number){
+  let  libroEditado = new Book(title, type, author, price, photo, id_book)  
   this.apiService.editBook(libroEditado).subscribe((resp: Respuesta) =>
   {
     console.log(resp);
-    if (resp.error)
-      this.toastr.success('no existe el libro');
-    else
+    if (resp.error){
+      this.toastr.error('no existe el libro');
+    } else {
       this.apiService.myBooks = resp.data
-      this.myBooks = resp.data
+      console.log(resp.data);
+      
       this.toastr.success('Tu libro se edito correctamente')
+      this.myBooks = resp.data
+      console.log(this.myBooks);
+    }        
+         
   })
 
   }
