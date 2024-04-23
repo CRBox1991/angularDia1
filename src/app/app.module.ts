@@ -21,6 +21,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,7 +37,8 @@ import { HttpClientModule } from '@angular/common/http';
     AddBookComponent,
     UpdateBookComponent,
     LoginPageComponent,
-    LoginComponent,  
+    LoginComponent,
+     
     
   ],
   imports: [

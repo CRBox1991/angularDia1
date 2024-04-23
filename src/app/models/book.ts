@@ -5,8 +5,7 @@ export class Book {
                 public author: string,
                 public price: number,
                 public photo: string,
-                public id_book: number = 0,
-                public id_user: number = 0,){
-
+                public book_id: number = 0,
+                public user_id: number = 0,){
     }
 }

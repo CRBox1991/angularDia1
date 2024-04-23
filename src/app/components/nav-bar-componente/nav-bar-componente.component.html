@@ -3,12 +3,17 @@
         <h1>My Books</h1>
     </div>
     <div class="links">
-        <a routerLink="/home">Home</a>
+    <ng-container *ngIf="userService.logueado == false; else loggedInLinks" >    
+        <a routerLink="/Home">Home</a>
         <a routerLink="/register">Register</a>
         <a routerLink="/login">Login</a>
+    </ng-container>
+    
+    <ng-template #loggedInLinks>
         <a routerLink="/profile">MyProfile</a>
         <a routerLink="/books">Books</a>
         <a routerLink="/AddBooks">AddBooks</a>
         <a routerLink="/ModifyBook">UpdateBook</a>
+    </ng-template>
     </div>
 </div>

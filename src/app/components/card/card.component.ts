@@ -19,13 +19,14 @@ export class CardComponent {
   
   public libro: Book;
   
-  constructor(public booksService:BooksService, private toastr: ToastrService, public apiService: BooksService){
+  constructor(public booksService:BooksService, private toastr: ToastrService){
         
   }
 
-  public deleteBook(id_book: number ) {
-    this.borrarLibro.emit(id_book)
-    console.log(id_book);
-     
+  public deleteBook(book_id: number ) {
+    this.borrarLibro.emit(book_id)
+    console.log(book_id);     
+    console.log("borrando libro card componete");
+    
  }
 }

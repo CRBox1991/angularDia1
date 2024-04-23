@@ -4,11 +4,11 @@
        
         <div class="card" style="display: flex; flex-direction: column; justify-content: space-around;background-color: var(--bgOrange); border: 3px solid orangered; border-radius: 30px; color:white;
         width: 450px; height: 600px; text-align: center; padding: 20px;">   
-            <button type="button" class="close" (click)="deleteBook(bucleBooks.id_book)" style=" width: 20px;height: 20px; border: yellow;background-color: rgb(255, 230, 0);
+            <button type="button" class="close" (click)="deleteBook(bucleBooks.book_id)" style=" width: 20px;height: 20px; border: yellow;background-color: rgb(255, 230, 0);
             border-radius: 15px; color:rgb(255, 0, 0); font-weight: bold; font-family: var(--fontRubik); font-size: 15px; margin-bottom: 10px;">X</button>  
                    
             <div >
-                <img src="{{bucleBooks.photo}}" alt="">
+                <img style="height: 220px; width: 180px;" src="{{bucleBooks.photo}}" alt="">
             </div>
             <div>
                 <p class="p">{{bucleBooks.type}}</p>
@@ -16,7 +16,7 @@
             <div>
                 <h2 class="h2">{{bucleBooks.title}}</h2>
                 <p class="p">{{bucleBooks.author}}</p>
-                <p class="p">Id:{{bucleBooks.id_book | idToString }} </p>
+                <p class="p">Id:{{bucleBooks.book_id | idToString }} </p>
             </div>
             <div >
                 <p class="p">{{bucleBooks.price}} €</p>

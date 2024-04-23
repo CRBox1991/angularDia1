@@ -1,6 +1,6 @@
 <div class="general">    
     <input type="search" placeholder="Book's Id" #id (keyup.enter)="getLibro(id.value)" >   
-    <div class="noLibros" *ngIf="libros.length === 0">No hay libros</div>
+    <!-- <div class="noLibros" *ngIf="libros.length === 0">No hay libros</div> -->
     <div class="general">
         <div *ngIf="this.libro; else Libros">  
             <app-card [bucleBooks]="libro"></app-card>

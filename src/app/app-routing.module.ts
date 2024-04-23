@@ -10,7 +10,7 @@ import { LoginPageComponent } from './pages/login-page/login-page.component';
 
 
 const routes: Routes = [
-  { path: '', redirectTo: "home", pathMatch: 'full' }, // Ruta por defecto que redirige a la página de inicio
+  { path: "", redirectTo: "/home", pathMatch: 'full' }, // Ruta por defecto que redirige a la página de inicio
   { path: "home", component:HomePageComponent},
   { path: "register", component: RegisterPageComponent},
   { path: "profile", component: ProfilePageComponent},

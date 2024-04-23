@@ -4,7 +4,7 @@
         <img class="img" src="{{miUser.photo}}">
     </div>
     <div class="nombre">
-        <h3>Cristian Redondo Caja</h3>
+        <h3>{{miUser.name}} {{miUser.last_name}}</h3>
     </div>
     <div class="datos">
         <p><b>Nombre</b></p>
@@ -22,7 +22,7 @@
         <input type="text" value="{{miUser.last_name}}" #input2>
         <input type="text" value="{{miUser.email}}" #input3>
         <input type="text" placeholder="url" #input4>
-        <button type="button"(click)="enviar(input1, input2, input3, input4)">Apply</button>
+        <button type="button"(click)="enviar(input1.value, input2.value, input3.value, input4.value)">Apply</button>
     </form>
     </div>
 </div>

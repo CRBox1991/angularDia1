@@ -2,7 +2,12 @@
     <form action="">
         <h2>ACTUALIZA UN LIBRO</h2>
         <input type="text" placeholder="Titulo" #input1>
-        <input type="text" placeholder="Tapa dura o blanda" #input2>
+        <select id="tapa" name="tapa"  #input2>
+            <option value="" disabled selected>Elige una opcion</option>
+            <option value="tapa dura">tapa dura</option>
+            <option value="tapa blanda">tapa blanda</option>            
+        </select>
+        
         <input type="text" placeholder="Autor" #input3>
         <input type="text" placeholder="Precio" #input4>
         <input type="text" placeholder="Photo" #input5>
